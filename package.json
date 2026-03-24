@@ -1,22 +1,25 @@
 {
     "name": "NewsJS",
     "version": "1.0.0",
-    "description": "",
-    "main": "webpack.base.config.js",
+    "description": "News portal with TypeScript",
+    "main": "webpack.config.js",
     "scripts": {
         "start": "webpack serve --open --config ./webpack.config.js --env mode=dev",
         "build": "webpack --config ./webpack.config.js --env mode=prod",
-        "lint": "eslint . --ext .ts"
+        "lint": "eslint . --ext .ts",
+        "type-check": "tsc --noEmit"
     },
-    "repository": {
-        "type": "git",
-        "url": ""
-    },
-    "keywords": [],
+    "keywords": [
+        "news",
+        "typescript",
+        "webpack"
+    ],
     "author": "Aleh Serhiyenia",
     "license": "ISC",
-    "homepage": "",
     "devDependencies": {
+        "@types/node": "^20.19.37",
+        "@typescript-eslint/eslint-plugin": "^8.57.2",
+        "@typescript-eslint/parser": "^8.57.2",
         "clean-webpack-plugin": "^4.0.0",
         "copy-webpack-plugin": "^12.0.2",
         "css-loader": "^6.10.0",
@@ -28,6 +31,8 @@
         "html-webpack-plugin": "^5.6.0",
         "prettier": "3.2.5",
         "style-loader": "^3.3.4",
+        "ts-loader": "^9.5.1",
+        "typescript": "^5.3.3",
         "webpack": "^5.90.1",
         "webpack-cli": "^5.1.4",
         "webpack-dev-server": "^5.0.0",
